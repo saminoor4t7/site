@@ -1,1 +1,3 @@
-# site
+# Headline
+
+> An awesome project.

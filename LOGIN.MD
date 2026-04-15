@@ -1,28 +1,36 @@
+# 🔐 Login Module
+
+This module handles authentication for both **Customers** and **Suppliers**.
+
+## 📊 Login Flow
+
 ```mermaid
 flowchart TD
-Z[APP OPEN] --> A[ASKED QUESTION]
+    Z[APP OPEN] --> A{Who are you?}
 
-A --> B[Customer]
-A --> F[Supplier]
+    A --> B[Customer]
+    A --> F[Supplier]
 
-B -->|NEW USER| C[SIGN UP]
-B -->|OLD USER| D[LOGIN PAGE]
+    B -->|New User| C[Sign Up]
+    B -->|Returning User| D[Login Page]
 
-F -->|NEW USER| G[SIGN UP]
-F -->|OLD USER| H[LOGIN PAGE]
+    F -->|New User| G[Sign Up]
+    F -->|Returning User| H[Login Page]
 
-C --> I[WITH EMAIL]
-C --> J[WITH PHONE]
+    C --> I[Register with Email]
+    C --> J[Register with Phone]
 
-D --> K[LOGIN WITH PHONE + PASSWORD]
+    G --> L[Register with Phone]
 
-G --> L[WITH PHONE]
+    D --> K[Login: Phone + Password]
+    H --> M[Login: Phone + Password]
 
-H --> M[LOGIN WITH PHONE + PASSWORD]
-
-K --> N[Open Prescripter File]
+    K --> N[Open Prescriptor]
+    M --> O[Open Medical Store]
 ```
- [Open Prescripter](prescripter.md)
 
- 
- [Open MEDICAL_STORE](MEDICAL_STORE.MD)
+## 🔗 Navigation
+
+- ➡️ [Go to Prescriptor Module](PRESCRIPTOR.md)
+- ➡️ [Go to Medical Store Module](MEDICAL_STORE.md)
+- 🏠 [Back to Home](README.md)
